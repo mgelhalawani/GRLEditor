@@ -6,20 +6,167 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CD0A024D1A8563BE00616056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A024C1A8563BE00616056 /* AppDelegate.swift */; };
+		CD0A024F1A8563BE00616056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A024E1A8563BE00616056 /* ViewController.swift */; };
+		CD0A02521A8563BE00616056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02501A8563BE00616056 /* Main.storyboard */; };
+		CD0A02541A8563BE00616056 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02531A8563BE00616056 /* Images.xcassets */; };
+		CD0A02571A8563BE00616056 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02551A8563BE00616056 /* LaunchScreen.xib */; };
+		CD0A02631A8563BE00616056 /* GRLEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A02621A8563BE00616056 /* GRLEditorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD0A025D1A8563BE00616056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDBB47BF1A8450B600F839C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0A02461A8563BE00616056;
+			remoteInfo = GRLEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD0A02471A8563BE00616056 /* GRLEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GRLEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0A024B1A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0A024C1A8563BE00616056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD0A024E1A8563BE00616056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD0A02511A8563BE00616056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD0A02531A8563BE00616056 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CD0A02561A8563BE00616056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRLEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0A02611A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0A02621A8563BE00616056 /* GRLEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRLEditorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD0A02441A8563BE00616056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0A02591A8563BE00616056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		CD0A02481A8563BE00616056 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A02471A8563BE00616056 /* GRLEditor.app */,
+				CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD0A02491A8563BE00616056 /* GRLEditor */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A024C1A8563BE00616056 /* AppDelegate.swift */,
+				CD0A024E1A8563BE00616056 /* ViewController.swift */,
+				CD0A02501A8563BE00616056 /* Main.storyboard */,
+				CD0A02531A8563BE00616056 /* Images.xcassets */,
+				CD0A02551A8563BE00616056 /* LaunchScreen.xib */,
+				CD0A024A1A8563BE00616056 /* Supporting Files */,
+			);
+			path = GRLEditor;
+			sourceTree = "<group>";
+		};
+		CD0A024A1A8563BE00616056 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A024B1A8563BE00616056 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD0A025F1A8563BE00616056 /* GRLEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A02621A8563BE00616056 /* GRLEditorTests.swift */,
+				CD0A02601A8563BE00616056 /* Supporting Files */,
+			);
+			path = GRLEditorTests;
+			sourceTree = "<group>";
+		};
+		CD0A02601A8563BE00616056 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A02611A8563BE00616056 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CDBB47BE1A8450B600F839C5 = {
 			isa = PBXGroup;
 			children = (
+				CD0A02491A8563BE00616056 /* GRLEditor */,
+				CD0A025F1A8563BE00616056 /* GRLEditorTests */,
+				CD0A02481A8563BE00616056 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD0A02461A8563BE00616056 /* GRLEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0A02641A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditor" */;
+			buildPhases = (
+				CD0A02431A8563BE00616056 /* Sources */,
+				CD0A02441A8563BE00616056 /* Frameworks */,
+				CD0A02451A8563BE00616056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GRLEditor;
+			productName = GRLEditor;
+			productReference = CD0A02471A8563BE00616056 /* GRLEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD0A025B1A8563BE00616056 /* GRLEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditorTests" */;
+			buildPhases = (
+				CD0A02581A8563BE00616056 /* Sources */,
+				CD0A02591A8563BE00616056 /* Frameworks */,
+				CD0A025A1A8563BE00616056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0A025E1A8563BE00616056 /* PBXTargetDependency */,
+			);
+			name = GRLEditorTests;
+			productName = GRLEditorTests;
+			productReference = CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CDBB47BF1A8450B600F839C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					CD0A02461A8563BE00616056 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7B8Q3G5DD4;
+					};
+					CD0A025B1A8563BE00616056 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CD0A02461A8563BE00616056;
+					};
+				};
 			};
 			buildConfigurationList = CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "GRLEditor" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -27,16 +174,270 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CDBB47BE1A8450B600F839C5;
+			productRefGroup = CD0A02481A8563BE00616056 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				CD0A02461A8563BE00616056 /* GRLEditor */,
+				CD0A025B1A8563BE00616056 /* GRLEditorTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CD0A02451A8563BE00616056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0A02521A8563BE00616056 /* Main.storyboard in Resources */,
+				CD0A02571A8563BE00616056 /* LaunchScreen.xib in Resources */,
+				CD0A02541A8563BE00616056 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0A025A1A8563BE00616056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD0A02431A8563BE00616056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0A024F1A8563BE00616056 /* ViewController.swift in Sources */,
+				CD0A024D1A8563BE00616056 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0A02581A8563BE00616056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0A02631A8563BE00616056 /* GRLEditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0A025E1A8563BE00616056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0A02461A8563BE00616056 /* GRLEditor */;
+			targetProxy = CD0A025D1A8563BE00616056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD0A02501A8563BE00616056 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0A02511A8563BE00616056 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD0A02551A8563BE00616056 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0A02561A8563BE00616056 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		CD0A02651A8563BE00616056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GRLEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CD0A02661A8563BE00616056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GRLEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD0A02681A8563BE00616056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GRLEditorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRLEditor.app/GRLEditor";
+			};
+			name = Debug;
+		};
+		CD0A02691A8563BE00616056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GRLEditorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRLEditor.app/GRLEditor";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		CDBB47C31A8450B600F839C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -52,6 +453,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD0A02641A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0A02651A8563BE00616056 /* Debug */,
+				CD0A02661A8563BE00616056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0A02681A8563BE00616056 /* Debug */,
+				CD0A02691A8563BE00616056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "GRLEditor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
