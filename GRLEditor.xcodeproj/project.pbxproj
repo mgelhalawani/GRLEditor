@@ -11,8 +11,10 @@
 		CD0A024F1A8563BE00616056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A024E1A8563BE00616056 /* ViewController.swift */; };
 		CD0A02521A8563BE00616056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02501A8563BE00616056 /* Main.storyboard */; };
 		CD0A02541A8563BE00616056 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02531A8563BE00616056 /* Images.xcassets */; };
-		CD0A02571A8563BE00616056 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02551A8563BE00616056 /* LaunchScreen.xib */; };
 		CD0A02631A8563BE00616056 /* GRLEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A02621A8563BE00616056 /* GRLEditorTests.swift */; };
+		CD4D16D81A86D1AC00D5B6B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D16D61A86D1AC00D5B6B8 /* LaunchScreen.xib */; };
+		CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */; };
+		CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D41991A86CD5C00B1E276 /* ModelingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +34,12 @@
 		CD0A024E1A8563BE00616056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD0A02511A8563BE00616056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD0A02531A8563BE00616056 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CD0A02561A8563BE00616056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRLEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0A02611A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0A02621A8563BE00616056 /* GRLEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRLEditorTests.swift; sourceTree = "<group>"; };
+		CD4D16D71A86D1AC00D5B6B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = GRLEditor/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeFormLine.swift; sourceTree = "<group>"; };
+		CD9D41991A86CD5C00B1E276 /* ModelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelingView.swift; path = GRLEditor/ModelingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +72,14 @@
 		CD0A02491A8563BE00616056 /* GRLEditor */ = {
 			isa = PBXGroup;
 			children = (
+				CD4D16D51A86CF2400D5B6B8 /* View */,
+				CD4D16D41A86CF1C00D5B6B8 /* Controller */,
+				CD4D16D31A86CF1400D5B6B8 /* Model */,
 				CD0A024C1A8563BE00616056 /* AppDelegate.swift */,
 				CD0A024E1A8563BE00616056 /* ViewController.swift */,
 				CD0A02501A8563BE00616056 /* Main.storyboard */,
+				CD4D16D61A86D1AC00D5B6B8 /* LaunchScreen.xib */,
 				CD0A02531A8563BE00616056 /* Images.xcassets */,
-				CD0A02551A8563BE00616056 /* LaunchScreen.xib */,
 				CD0A024A1A8563BE00616056 /* Supporting Files */,
 			);
 			path = GRLEditor;
@@ -101,6 +108,32 @@
 				CD0A02611A8563BE00616056 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD4D16D31A86CF1400D5B6B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CD4D16D41A86CF1C00D5B6B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CD4D16D51A86CF2400D5B6B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD9D41991A86CD5C00B1E276 /* ModelingView.swift */,
+			);
+			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CDBB47BE1A8450B600F839C5 = {
@@ -193,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0A02521A8563BE00616056 /* Main.storyboard in Resources */,
-				CD0A02571A8563BE00616056 /* LaunchScreen.xib in Resources */,
+				CD4D16D81A86D1AC00D5B6B8 /* LaunchScreen.xib in Resources */,
 				CD0A02541A8563BE00616056 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +247,8 @@
 			files = (
 				CD0A024F1A8563BE00616056 /* ViewController.swift in Sources */,
 				CD0A024D1A8563BE00616056 /* AppDelegate.swift in Sources */,
+				CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */,
+				CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,12 +279,13 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CD0A02551A8563BE00616056 /* LaunchScreen.xib */ = {
+		CD4D16D61A86D1AC00D5B6B8 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CD0A02561A8563BE00616056 /* Base */,
+				CD4D16D71A86D1AC00D5B6B8 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -460,6 +496,7 @@
 				CD0A02661A8563BE00616056 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +505,7 @@
 				CD0A02691A8563BE00616056 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "GRLEditor" */ = {
 			isa = XCConfigurationList;
