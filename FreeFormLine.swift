@@ -11,7 +11,7 @@
 
 import UIKit
 
-class FreeFormLine{
+struct FreeFormLine{
     
     private var start: CGPoint
     var startX:CGFloat{
