@@ -12,8 +12,8 @@
 		CD0A02521A8563BE00616056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02501A8563BE00616056 /* Main.storyboard */; };
 		CD0A02541A8563BE00616056 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02531A8563BE00616056 /* Images.xcassets */; };
 		CD0A02631A8563BE00616056 /* GRLEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A02621A8563BE00616056 /* GRLEditorTests.swift */; };
-		CD4D16D81A86D1AC00D5B6B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D16D61A86D1AC00D5B6B8 /* LaunchScreen.xib */; };
 		CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */; };
+		CD972B1B1A8FD11C00E5AA36 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */; };
 		CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D41991A86CD5C00B1E276 /* ModelingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,18 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD0A02471A8563BE00616056 /* GRLEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GRLEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0A02471A8563BE00616056 /* TouchGRL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchGRL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0A024B1A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0A024C1A8563BE00616056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD0A024E1A8563BE00616056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD0A02511A8563BE00616056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD0A02531A8563BE00616056 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRLEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0A025C1A8563BE00616056 /* TouchGRLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchGRLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0A02611A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0A02621A8563BE00616056 /* GRLEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRLEditorTests.swift; sourceTree = "<group>"; };
-		CD4D16D71A86D1AC00D5B6B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = GRLEditor/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeFormLine.swift; sourceTree = "<group>"; };
-		CD9D41991A86CD5C00B1E276 /* ModelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelingView.swift; path = GRLEditor/ModelingView.swift; sourceTree = "<group>"; };
+		CD972B1A1A8FD11C00E5AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CD9D41991A86CD5C00B1E276 /* ModelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelingView.swift; path = TouchGRL/ModelingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +63,13 @@
 		CD0A02481A8563BE00616056 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD0A02471A8563BE00616056 /* GRLEditor.app */,
-				CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */,
+				CD0A02471A8563BE00616056 /* TouchGRL.app */,
+				CD0A025C1A8563BE00616056 /* TouchGRLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD0A02491A8563BE00616056 /* GRLEditor */ = {
+		CD0A02491A8563BE00616056 /* TouchGRL */ = {
 			isa = PBXGroup;
 			children = (
 				CD4D16D51A86CF2400D5B6B8 /* View */,
@@ -78,11 +78,11 @@
 				CD0A024C1A8563BE00616056 /* AppDelegate.swift */,
 				CD0A024E1A8563BE00616056 /* ViewController.swift */,
 				CD0A02501A8563BE00616056 /* Main.storyboard */,
-				CD4D16D61A86D1AC00D5B6B8 /* LaunchScreen.xib */,
+				CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */,
 				CD0A02531A8563BE00616056 /* Images.xcassets */,
 				CD0A024A1A8563BE00616056 /* Supporting Files */,
 			);
-			path = GRLEditor;
+			path = TouchGRL;
 			sourceTree = "<group>";
 		};
 		CD0A024A1A8563BE00616056 /* Supporting Files */ = {
@@ -93,13 +93,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CD0A025F1A8563BE00616056 /* GRLEditorTests */ = {
+		CD0A025F1A8563BE00616056 /* TouchGRLTests */ = {
 			isa = PBXGroup;
 			children = (
 				CD0A02621A8563BE00616056 /* GRLEditorTests.swift */,
 				CD0A02601A8563BE00616056 /* Supporting Files */,
 			);
-			path = GRLEditorTests;
+			path = TouchGRLTests;
 			sourceTree = "<group>";
 		};
 		CD0A02601A8563BE00616056 /* Supporting Files */ = {
@@ -139,8 +139,8 @@
 		CDBB47BE1A8450B600F839C5 = {
 			isa = PBXGroup;
 			children = (
-				CD0A02491A8563BE00616056 /* GRLEditor */,
-				CD0A025F1A8563BE00616056 /* GRLEditorTests */,
+				CD0A02491A8563BE00616056 /* TouchGRL */,
+				CD0A025F1A8563BE00616056 /* TouchGRLTests */,
 				CD0A02481A8563BE00616056 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD0A02461A8563BE00616056 /* GRLEditor */ = {
+		CD0A02461A8563BE00616056 /* TouchGRL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD0A02641A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditor" */;
+			buildConfigurationList = CD0A02641A8563BE00616056 /* Build configuration list for PBXNativeTarget "TouchGRL" */;
 			buildPhases = (
 				CD0A02431A8563BE00616056 /* Sources */,
 				CD0A02441A8563BE00616056 /* Frameworks */,
@@ -160,14 +160,14 @@
 			);
 			dependencies = (
 			);
-			name = GRLEditor;
+			name = TouchGRL;
 			productName = GRLEditor;
-			productReference = CD0A02471A8563BE00616056 /* GRLEditor.app */;
+			productReference = CD0A02471A8563BE00616056 /* TouchGRL.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CD0A025B1A8563BE00616056 /* GRLEditorTests */ = {
+		CD0A025B1A8563BE00616056 /* TouchGRLTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditorTests" */;
+			buildConfigurationList = CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "TouchGRLTests" */;
 			buildPhases = (
 				CD0A02581A8563BE00616056 /* Sources */,
 				CD0A02591A8563BE00616056 /* Frameworks */,
@@ -178,9 +178,9 @@
 			dependencies = (
 				CD0A025E1A8563BE00616056 /* PBXTargetDependency */,
 			);
-			name = GRLEditorTests;
+			name = TouchGRLTests;
 			productName = GRLEditorTests;
-			productReference = CD0A025C1A8563BE00616056 /* GRLEditorTests.xctest */;
+			productReference = CD0A025C1A8563BE00616056 /* TouchGRLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -201,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "GRLEditor" */;
+			buildConfigurationList = CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "TouchGRL" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -214,8 +214,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD0A02461A8563BE00616056 /* GRLEditor */,
-				CD0A025B1A8563BE00616056 /* GRLEditorTests */,
+				CD0A02461A8563BE00616056 /* TouchGRL */,
+				CD0A025B1A8563BE00616056 /* TouchGRLTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0A02521A8563BE00616056 /* Main.storyboard in Resources */,
-				CD4D16D81A86D1AC00D5B6B8 /* LaunchScreen.xib in Resources */,
+				CD972B1B1A8FD11C00E5AA36 /* LaunchScreen.xib in Resources */,
 				CD0A02541A8563BE00616056 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +265,7 @@
 /* Begin PBXTargetDependency section */
 		CD0A025E1A8563BE00616056 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD0A02461A8563BE00616056 /* GRLEditor */;
+			target = CD0A02461A8563BE00616056 /* TouchGRL */;
 			targetProxy = CD0A025D1A8563BE00616056 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -279,13 +279,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CD4D16D61A86D1AC00D5B6B8 /* LaunchScreen.xib */ = {
+		CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CD4D16D71A86D1AC00D5B6B8 /* Base */,
+				CD972B1A1A8FD11C00E5AA36 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -327,12 +326,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GRLEditor/Info.plist;
+				INFOPLIST_FILE = TouchGRL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TouchGRL;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -370,11 +369,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GRLEditor/Info.plist;
+				INFOPLIST_FILE = TouchGRL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TouchGRL;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -420,12 +419,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GRLEditorTests/Info.plist;
+				INFOPLIST_FILE = TouchGRLTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TouchGRLTests;
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRLEditor.app/GRLEditor";
 			};
@@ -463,11 +462,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = GRLEditorTests/Info.plist;
+				INFOPLIST_FILE = TouchGRLTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TouchGRLTests;
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRLEditor.app/GRLEditor";
 				VALIDATE_PRODUCT = YES;
@@ -489,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD0A02641A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditor" */ = {
+		CD0A02641A8563BE00616056 /* Build configuration list for PBXNativeTarget "TouchGRL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD0A02651A8563BE00616056 /* Debug */,
@@ -498,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "GRLEditorTests" */ = {
+		CD0A02671A8563BE00616056 /* Build configuration list for PBXNativeTarget "TouchGRLTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD0A02681A8563BE00616056 /* Debug */,
@@ -507,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "GRLEditor" */ = {
+		CDBB47C21A8450B600F839C5 /* Build configuration list for PBXProject "TouchGRL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDBB47C31A8450B600F839C5 /* Debug */,

@@ -1,6 +1,6 @@
 //
-//  GRLEditorTests.swift
-//  GRLEditorTests
+//  TouchGRLTests.swift
+//  TouchGRLTests
 //
 //  Created by Mohamed El-Halawani on 2015-02-06.
 //
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class GRLEditorTests: XCTestCase {
+class TouchGRLTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

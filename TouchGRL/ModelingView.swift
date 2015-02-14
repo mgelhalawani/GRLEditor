@@ -1,6 +1,6 @@
 //
 //  ModelingView.swift
-//  GRLEditor
+//  TouchGRL
 //
 //  Created by Mohamed El-Halawani on 2015-02-07.
 //  
