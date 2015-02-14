@@ -426,7 +426,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = TouchGRLTests;
 				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRLEditor.app/GRLEditor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchGRL.app/TouchGRL";
 			};
 			name = Debug;
 		};
@@ -468,7 +468,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = TouchGRLTests;
 				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRLEditor.app/GRLEditor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchGRL.app/TouchGRL";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
