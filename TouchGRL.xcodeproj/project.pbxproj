@@ -12,6 +12,7 @@
 		CD0A02521A8563BE00616056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02501A8563BE00616056 /* Main.storyboard */; };
 		CD0A02541A8563BE00616056 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0A02531A8563BE00616056 /* Images.xcassets */; };
 		CD0A02631A8563BE00616056 /* GRLEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0A02621A8563BE00616056 /* GRLEditorTests.swift */; };
+		CD129D1B1A92C49900FEEF22 /* DollarPRecoginzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD129D1A1A92C49900FEEF22 /* DollarPRecoginzer.swift */; };
 		CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */; };
 		CD972B1B1A8FD11C00E5AA36 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */; };
 		CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D41991A86CD5C00B1E276 /* ModelingView.swift */; };
@@ -37,7 +38,8 @@
 		CD0A025C1A8563BE00616056 /* TouchGRLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchGRLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0A02611A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0A02621A8563BE00616056 /* GRLEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRLEditorTests.swift; sourceTree = "<group>"; };
-		CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeFormLine.swift; sourceTree = "<group>"; };
+		CD129D1A1A92C49900FEEF22 /* DollarPRecoginzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DollarPRecoginzer.swift; path = TouchGRL/DollarPRecoginzer.swift; sourceTree = "<group>"; };
+		CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeFormLine.swift; path = TouchGRL/FreeFormLine.swift; sourceTree = "<group>"; };
 		CD972B1A1A8FD11C00E5AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD9D41991A86CD5C00B1E276 /* ModelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelingView.swift; path = TouchGRL/ModelingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 		CD4D16D41A86CF1C00D5B6B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CD129D1A1A92C49900FEEF22 /* DollarPRecoginzer.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -248,6 +251,7 @@
 				CD0A024F1A8563BE00616056 /* ViewController.swift in Sources */,
 				CD0A024D1A8563BE00616056 /* AppDelegate.swift in Sources */,
 				CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */,
+				CD129D1B1A92C49900FEEF22 /* DollarPRecoginzer.swift in Sources */,
 				CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
