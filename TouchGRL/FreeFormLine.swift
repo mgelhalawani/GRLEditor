@@ -13,35 +13,24 @@ import UIKit
 
 struct FreeFormLine{
     
-    private var start: CGPoint
-    var startX:CGFloat{
-        get {
-            return start.x
-        }
-    }
+    private let start: CGPoint
+    private let end: CGPoint
     
-    var startY:CGFloat{
-        get {
-            return start.y
-        }
-    }
-    
-    private var end: CGPoint
-    var endX:CGFloat{
-        get {
-            return end.x
-        }
-    }
-    
-    var endY:CGFloat{
-        get {
-            return end.y
-        }
-    }
+    // conveince proterty
+    let startX:CGFloat
+    let startY:CGFloat
+    let endX:CGFloat
+    let endY:CGFloat
     
     init(start _start: CGPoint, end _end: CGPoint){
-        self.start = _start
-        self.end = _end
+        // Initilizing  start and end points
+        start = _start
+        end = _end
+        
+        startX = start.x
+        startY = start.y
+        endX = end.x
+        endY = end.y
     }
 }
 
