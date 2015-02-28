@@ -486,13 +486,19 @@
 		CDBB47C31A8450B600F839C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		CDBB47C41A8450B600F839C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
