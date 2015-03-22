@@ -17,9 +17,9 @@ class DollarPRecoginzer{
     
     func recoginzer(points: [GesturePoint], templates: [GesturePoint]) -> (template: GesturePoint, score: Float){
         let samplingRate = 32 // denoted as n in $P pseudocode
-
+        
         normalize(points, samplingRate: samplingRate)
-
+        
         var score = Float.infinity
         
         var recognizedShape: GesturePoint?
@@ -36,45 +36,60 @@ class DollarPRecoginzer{
         return (recognizedShape!, score)
     }
     
-    func greadyCloudMatch(points: [GesturePoint], template: [GesturePoint], samplingRate: Int) -> (Float){
+    func greadyCloudMatch(points: [GesturePoint], template: [GesturePoint], samplingRate:Int) -> (Float){
+        var count = points.count
         let exponent: Float = 1 - 0.50
-        let step = Int(pow(Float(samplingRate), exponent))
-        
+        let step = Int(pow(Float(count), exponent))
         var minimum = Float.infinity
         
-        for var index = 0; index < samplingRate; index += step{
-            var distance1 = cloudDistance(points: points, templates: template, samplingRate: samplingRate, start: index)
-            var distance2 = cloudDistance(points: template, templates: points, samplingRate: samplingRate, start: index)
+        for var index = 0; index < count; index += step{
+            var distance1 = cloudDistance(points: points, templates: template, start: index)
+            var distance2 = cloudDistance(points: template, templates: points, start: index)
             
+            println("distance1 \(distance1) distance2 \(distance2)")
             minimum = min(min(minimum, distance1), distance2)
         }
         return minimum
     }
     
-    func cloudDistance(#points: [GesturePoint], templates: [GesturePoint], samplingRate: Int, start: Int) -> (Float){
-        var matched = [Bool](count: samplingRate, repeatedValue: false)
+    func cloudDistance(#points: [GesturePoint], templates: [GesturePoint], start: Int) -> (Float){
+        
+        var pointsNumber :Int = points.count
+        var matched : [Bool] = [Bool](count: pointsNumber, repeatedValue: false)
         var sum: Float = 0.0
         var pointsIndex = start
         do{
-            var min = Float.infinity
+
             var matchedIndex = -1
+
+            var min = Float.infinity
+
             for var templateIndex = 0; templateIndex < matched.count; ++templateIndex{
                 if !matched[templateIndex]{
-                    var distance = calculateEuclideanDistance(points[pointsIndex], secondPoint: templates[templateIndex])
-                    if distance < min{
-                        min = distance
-                        matchedIndex = templateIndex
+                    if pointsIndex < points.count && templateIndex < templates.count {
+                        var template = templates[templateIndex]
+                        var point = points[pointsIndex]
+                        var distance = calculateEuclideanDistance(point, secondPoint:template)
+                        println("distance \(distance)")
+                        if distance < min{
+                            min = distance
+                            matchedIndex = templateIndex
+                        }
                     }
                 }
             }
-            matched[matchedIndex] = true
-            var weight:Float = 1 - (Float(pointsIndex - start + samplingRate) % Float(samplingRate) / Float(samplingRate))
-            sum = sum + (weight * min)
+            if matchedIndex > -1{
+                matched[matchedIndex] = true
+            }
+            var weight:Float = 1.0 - Float(((pointsIndex - start + pointsNumber) % pointsNumber) / pointsNumber)
             
-            pointsIndex = (pointsIndex + 1) % samplingRate
-        
-        } while pointsIndex == start
-        
+            println("sum =\(sum) weight=\(weight) min=\(min)")
+            sum = sum + (weight * min)
+            if pointsIndex < pointsNumber{
+                pointsIndex = (pointsIndex + 1) % pointsNumber
+            }
+        } while pointsIndex != start
+        println("sum = \(sum)")
         return sum
     }
     
@@ -92,7 +107,7 @@ class DollarPRecoginzer{
     func resample(var originalPoints: [GesturePoint], samplingRate: Int) -> ([GesturePoint]){
         var length:Float = pathLength(originalPoints) / Float(samplingRate - 1)
         var baseDistance: Float = 0.0
-        var resampledPoints: [GesturePoint] = []
+        var resampledPoints: [GesturePoint] = [originalPoints[0]]
         
         for var index = 1; index < originalPoints.count; ++index{
             
@@ -102,8 +117,9 @@ class DollarPRecoginzer{
             if currentPoint.strokeId == previousPoint.strokeId{
                 var euclideanDistance: Float = calculateEuclideanDistance(currentPoint, secondPoint: previousPoint)
                 if (baseDistance + euclideanDistance) >= length{
+                    
                     let pointX: CGFloat = previousPoint.x + CGFloat((length - baseDistance) / euclideanDistance) * CGFloat(currentPoint.x - previousPoint.x)
-
+                    
                     let pointY: CGFloat = previousPoint.y + CGFloat((length - baseDistance) / euclideanDistance) * CGFloat(currentPoint.y - previousPoint.y)
                     
                     let newPoint: GesturePoint = GesturePoint(x: pointX, y: pointY, strokeId: currentPoint.strokeId)
@@ -116,6 +132,12 @@ class DollarPRecoginzer{
                 }
             }
         }
+        
+        if resampledPoints.count == (samplingRate - 1) {
+            var index = originalPoints.count - 1
+            resampledPoints.append(originalPoints[index])
+        }
+        
         return resampledPoints
     }
     
@@ -129,25 +151,28 @@ class DollarPRecoginzer{
             xMin = min(xMin, Float(originalPoints[index].x))
             yMin = min(yMin, Float(originalPoints[index].y))
             xMax = max(xMax, Float(originalPoints[index].x))
-            xMax = max(yMax, Float(originalPoints[index].y))
+            yMax = max(yMax, Float(originalPoints[index].y))
         }
+        
         var scale: Float = max(xMax - xMin, yMax - yMin)
         
         var newPoints: [GesturePoint] = []
         for var index = 0; index < originalPoints.count; ++index{
             var currenrPoint = originalPoints[index]
             
-            var pointX: CGFloat = CGFloat((Float(currenrPoint.x) - xMin) / scale)
-            var pointY: CGFloat = CGFloat((Float(currenrPoint.y) - yMin) / scale)
+            var pointX: Float = (Float(currenrPoint.x) - xMin) / scale
+            var pointY: Float = (Float(currenrPoint.y) - yMin) / scale
             
-            newPoints.insert(GesturePoint(x: pointX, y: pointY, strokeId: currenrPoint.strokeId), atIndex: index)
+            newPoints.insert(GesturePoint(x: CGFloat(pointX), y: CGFloat(pointY), strokeId: currenrPoint.strokeId), atIndex: index)
         }
         return newPoints
     }
     
     func translateToOrigin(originalPoints: [GesturePoint]) -> ([GesturePoint]){
+        
         var centroid: GesturePoint = GesturePoint(x: 0, y: 0, strokeId: 0)
         var count = originalPoints.count
+        
         for currentPoint in originalPoints{
             centroid = GesturePoint(x: centroid.x + currentPoint.x, y: centroid.y + currentPoint.y, strokeId: 0)
         }
@@ -164,12 +189,14 @@ class DollarPRecoginzer{
         }
         return newPoints
     }
-        
+    
     func pathLength(originalPoints: [GesturePoint]) -> (Float){
         var length: Float = 0
         for var index = 1; index < originalPoints.count; ++index{
-            if originalPoints[index].strokeId == originalPoints[index - 1].strokeId{
-                length += calculateEuclideanDistance(originalPoints[index], secondPoint: originalPoints[index - 1])
+            var currentPoint = originalPoints[index]
+            var previousPoint = originalPoints[index - 1]
+            if currentPoint.strokeId == previousPoint.strokeId{
+                length += calculateEuclideanDistance(currentPoint, secondPoint: previousPoint)
             }
         }
         return length

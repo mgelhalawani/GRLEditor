@@ -15,6 +15,4 @@ struct GesturePoint{
     let x:CGFloat
     let y:CGFloat
     var strokeId: Int
-    
-
 }
