@@ -69,7 +69,6 @@ int const DollarPNumPoints = 32;
 	for (int i = 0; i < [points count]; i += step) {
 		float d1 = [self cloudDistanceFrom:points to:template start:i];
 		float d2 = [self cloudDistanceFrom:template to:points start:i];
-        NSLog(@"distance1 %f distance2 %f", d1, d2);
 		min = MIN(min, MIN(d1, d2));
 	}
     
@@ -99,7 +98,6 @@ int const DollarPNumPoints = 32;
 			if (![matched[j] boolValue]) {
                 if (i < numPoints1 && j < numPoints2) {
                     float d = [self distanceFrom:points1[i] to:points2[j]];
-                    NSLog(@"distance =%f", d);
                     if (d < min) {
                         min = d;
                         index = j;
@@ -107,7 +105,6 @@ int const DollarPNumPoints = 32;
                 }
 			}
 		}
-        NSLog(@"Line 1");
         
 
         if (index > -1) {

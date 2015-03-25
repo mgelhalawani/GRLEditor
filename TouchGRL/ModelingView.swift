@@ -11,11 +11,13 @@
 
 import UIKit
 
-
 class ModelingView: UIView {
 
     var lastPoint: CGPoint!
     var freeFormLines: [FreeFormLine] = []
+    var strockID : Int = 1
+    var touchPoints : [DollarPoint] = []
+
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,6 +25,7 @@ class ModelingView: UIView {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         lastPoint = touches.anyObject()?.locationInView(self)
+        addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
     }
     
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
@@ -30,6 +33,14 @@ class ModelingView: UIView {
         freeFormLines.append(FreeFormLine(start: lastPoint, end: newPoint!))
         lastPoint = newPoint
         self.setNeedsDisplay()
+        addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
+    }
+    
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        lastPoint = touches.anyObject()?.locationInView(self)
+        addPoint(self.strockID++, x: Float(lastPoint.x), y: Float(lastPoint.y))
+        var recognizer : RecognizeController = RecognizeController()
+        recognizer.recognize(touchPoints)
     }
 
     override func drawRect(rect: CGRect) {
@@ -46,4 +57,24 @@ class ModelingView: UIView {
         
         CGContextStrokePath(context)
     }
+    
+    func addPoint(strockID: Int, x: Float, y: Float){
+        var point : DollarPoint = DollarPoint()
+        point.id = strockID
+        point.x = x
+        point.y = y
+        touchPoints.append(point)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
