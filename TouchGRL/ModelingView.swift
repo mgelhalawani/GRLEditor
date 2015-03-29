@@ -40,7 +40,8 @@ class ModelingView: UIView {
         lastPoint = touches.anyObject()?.locationInView(self)
         addPoint(self.strockID++, x: Float(lastPoint.x), y: Float(lastPoint.y))
         var recognizer : RecognizeController = RecognizeController()
-        recognizer.recognize(touchPoints)
+        var result = recognizer.recognize(touchPoints)
+        addGRLNotation(result.name)
     }
 
     override func drawRect(rect: CGRect) {
@@ -54,7 +55,6 @@ class ModelingView: UIView {
             CGContextMoveToPoint(context, line.startX, line.startY)
             CGContextAddLineToPoint(context, line.endX, line.endY)
         }
-        
         CGContextStrokePath(context)
     }
     
@@ -66,15 +66,16 @@ class ModelingView: UIView {
         touchPoints.append(point)
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func addGRLNotation(type: NSString){
+        var newView: GRLView
+        
+        switch type {
+        case "Softgoal":
+             newView = GRLSoftgoalView(frame: CGRectMake(15, 15, 100,100))
+             newView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.0)
+             self.addSubview(newView)
+        default:
+            println("Unknown type")
+        }
+    }
 }

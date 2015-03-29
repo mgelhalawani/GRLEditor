@@ -15,20 +15,22 @@
 		CD11BB421AB0DE6600C5D573 /* DollarPRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD129D1A1A92C49900FEEF22 /* DollarPRecognizer.swift */; };
 		CD129D1B1A92C49900FEEF22 /* DollarPRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD129D1A1A92C49900FEEF22 /* DollarPRecognizer.swift */; };
 		CD129D1D1A92C72700FEEF22 /* GesturePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD129D1C1A92C72700FEEF22 /* GesturePoint.swift */; };
-		CD288EFA1ABF5E1100D3D787 /* DollarDefaultGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EEF1ABF5E1100D3D787 /* DollarDefaultGestures.m */; };
 		CD288EFB1ABF5E1100D3D787 /* DollarP.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF11ABF5E1100D3D787 /* DollarP.m */; };
-		CD288EFC1ABF5E1100D3D787 /* DollarPGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF31ABF5E1100D3D787 /* DollarPGestureRecognizer.m */; };
 		CD288EFD1ABF5E1100D3D787 /* DollarPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF51ABF5E1100D3D787 /* DollarPoint.m */; };
 		CD288EFE1ABF5E1100D3D787 /* DollarPointCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF71ABF5E1100D3D787 /* DollarPointCloud.m */; };
 		CD288EFF1ABF5E1100D3D787 /* DollarResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF91ABF5E1100D3D787 /* DollarResult.m */; };
 		CD288F021ABF5FB800D3D787 /* ObjCTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD288F011ABF5FB800D3D787 /* ObjCTexts.swift */; };
-		CD288F031ABF605000D3D787 /* DollarDefaultGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EEF1ABF5E1100D3D787 /* DollarDefaultGestures.m */; };
 		CD288F041ABF605600D3D787 /* DollarP.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF11ABF5E1100D3D787 /* DollarP.m */; };
-		CD288F051ABF605B00D3D787 /* DollarPGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF31ABF5E1100D3D787 /* DollarPGestureRecognizer.m */; };
 		CD288F061ABF605E00D3D787 /* DollarPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF51ABF5E1100D3D787 /* DollarPoint.m */; };
 		CD288F071ABF606000D3D787 /* DollarPointCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF71ABF5E1100D3D787 /* DollarPointCloud.m */; };
 		CD288F081ABF606300D3D787 /* DollarResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288EF91ABF5E1100D3D787 /* DollarResult.m */; };
 		CD288F0A1ABF613800D3D787 /* DPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD288F091ABF613800D3D787 /* DPTests.m */; };
+		CD30334E1AC8821B00807627 /* GRLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30334D1AC8821B00807627 /* GRLView.swift */; };
+		CD30334F1AC8821B00807627 /* GRLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30334D1AC8821B00807627 /* GRLView.swift */; };
+		CD3033511AC8844900807627 /* GRLSoftgoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3033501AC8844900807627 /* GRLSoftgoalView.swift */; };
+		CD3033521AC8844900807627 /* GRLSoftgoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3033501AC8844900807627 /* GRLSoftgoalView.swift */; };
+		CD3033541AC885C300807627 /* GRLNotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3033531AC885C300807627 /* GRLNotations.swift */; };
+		CD3033551AC885C300807627 /* GRLNotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3033531AC885C300807627 /* GRLNotations.swift */; };
 		CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */; };
 		CD5EB70C1AC251410063008F /* RecognizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5EB70B1AC251410063008F /* RecognizeController.swift */; };
 		CD5EB70D1AC251410063008F /* RecognizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5EB70B1AC251410063008F /* RecognizeController.swift */; };
@@ -55,7 +57,7 @@
 		CD0A02471A8563BE00616056 /* TouchGRL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchGRL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0A024B1A8563BE00616056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0A024C1A8563BE00616056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD0A024E1A8563BE00616056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD0A024E1A8563BE00616056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = TouchGRL/ViewController.swift; sourceTree = "<group>"; };
 		CD0A02511A8563BE00616056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD0A02531A8563BE00616056 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD0A025C1A8563BE00616056 /* TouchGRLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchGRLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,12 +65,8 @@
 		CD0A02621A8563BE00616056 /* TouchGRLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchGRLTests.swift; sourceTree = "<group>"; };
 		CD129D1A1A92C49900FEEF22 /* DollarPRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DollarPRecognizer.swift; path = TouchGRL/DollarPRecognizer.swift; sourceTree = "<group>"; };
 		CD129D1C1A92C72700FEEF22 /* GesturePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GesturePoint.swift; path = TouchGRL/GesturePoint.swift; sourceTree = "<group>"; };
-		CD288EEE1ABF5E1100D3D787 /* DollarDefaultGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DollarDefaultGestures.h; sourceTree = "<group>"; };
-		CD288EEF1ABF5E1100D3D787 /* DollarDefaultGestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarDefaultGestures.m; sourceTree = "<group>"; };
 		CD288EF01ABF5E1100D3D787 /* DollarP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DollarP.h; sourceTree = "<group>"; };
 		CD288EF11ABF5E1100D3D787 /* DollarP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarP.m; sourceTree = "<group>"; };
-		CD288EF21ABF5E1100D3D787 /* DollarPGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DollarPGestureRecognizer.h; sourceTree = "<group>"; };
-		CD288EF31ABF5E1100D3D787 /* DollarPGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarPGestureRecognizer.m; sourceTree = "<group>"; };
 		CD288EF41ABF5E1100D3D787 /* DollarPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DollarPoint.h; sourceTree = "<group>"; };
 		CD288EF51ABF5E1100D3D787 /* DollarPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarPoint.m; sourceTree = "<group>"; };
 		CD288EF61ABF5E1100D3D787 /* DollarPointCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DollarPointCloud.h; sourceTree = "<group>"; };
@@ -78,6 +76,9 @@
 		CD288F001ABF5E4500D3D787 /* ObjC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		CD288F011ABF5FB800D3D787 /* ObjCTexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjCTexts.swift; sourceTree = "<group>"; };
 		CD288F091ABF613800D3D787 /* DPTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPTests.m; sourceTree = "<group>"; };
+		CD30334D1AC8821B00807627 /* GRLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GRLView.swift; path = TouchGRL/GRLView.swift; sourceTree = "<group>"; };
+		CD3033501AC8844900807627 /* GRLSoftgoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GRLSoftgoalView.swift; path = TouchGRL/GRLSoftgoalView.swift; sourceTree = "<group>"; };
+		CD3033531AC885C300807627 /* GRLNotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GRLNotations.swift; path = TouchGRL/GRLNotations.swift; sourceTree = "<group>"; };
 		CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreeFormLine.swift; path = TouchGRL/FreeFormLine.swift; sourceTree = "<group>"; };
 		CD5EB70B1AC251410063008F /* RecognizeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecognizeController.swift; path = TouchGRL/RecognizeController.swift; sourceTree = "<group>"; };
 		CD972B1A1A8FD11C00E5AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -114,15 +115,12 @@
 		CD0A02491A8563BE00616056 /* TouchGRL */ = {
 			isa = PBXGroup;
 			children = (
+				CD3033571AC88B5700807627 /* UI */,
+				CD3033561AC88B0D00807627 /* Misc */,
 				CD288EED1ABF5E1100D3D787 /* DollarP */,
 				CD4D16D51A86CF2400D5B6B8 /* View */,
 				CD4D16D41A86CF1C00D5B6B8 /* Controller */,
 				CD4D16D31A86CF1400D5B6B8 /* Model */,
-				CD288F001ABF5E4500D3D787 /* ObjC-Bridging-Header.h */,
-				CD0A024C1A8563BE00616056 /* AppDelegate.swift */,
-				CD0A024E1A8563BE00616056 /* ViewController.swift */,
-				CD0A02501A8563BE00616056 /* Main.storyboard */,
-				CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */,
 				CD0A02531A8563BE00616056 /* Images.xcassets */,
 				CD0A024A1A8563BE00616056 /* Supporting Files */,
 			);
@@ -159,12 +157,8 @@
 		CD288EED1ABF5E1100D3D787 /* DollarP */ = {
 			isa = PBXGroup;
 			children = (
-				CD288EEE1ABF5E1100D3D787 /* DollarDefaultGestures.h */,
-				CD288EEF1ABF5E1100D3D787 /* DollarDefaultGestures.m */,
 				CD288EF01ABF5E1100D3D787 /* DollarP.h */,
 				CD288EF11ABF5E1100D3D787 /* DollarP.m */,
-				CD288EF21ABF5E1100D3D787 /* DollarPGestureRecognizer.h */,
-				CD288EF31ABF5E1100D3D787 /* DollarPGestureRecognizer.m */,
 				CD288EF41ABF5E1100D3D787 /* DollarPoint.h */,
 				CD288EF51ABF5E1100D3D787 /* DollarPoint.m */,
 				CD288EF61ABF5E1100D3D787 /* DollarPointCloud.h */,
@@ -173,6 +167,24 @@
 				CD288EF91ABF5E1100D3D787 /* DollarResult.m */,
 			);
 			path = DollarP;
+			sourceTree = "<group>";
+		};
+		CD3033561AC88B0D00807627 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CD288F001ABF5E4500D3D787 /* ObjC-Bridging-Header.h */,
+				CD0A024C1A8563BE00616056 /* AppDelegate.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		CD3033571AC88B5700807627 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A02501A8563BE00616056 /* Main.storyboard */,
+				CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		CD4D16D31A86CF1400D5B6B8 /* Model */ = {
@@ -188,8 +200,10 @@
 		CD4D16D41A86CF1C00D5B6B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CD3033531AC885C300807627 /* GRLNotations.swift */,
 				CD129D1A1A92C49900FEEF22 /* DollarPRecognizer.swift */,
 				CD5EB70B1AC251410063008F /* RecognizeController.swift */,
+				CD0A024E1A8563BE00616056 /* ViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -199,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				CD9D41991A86CD5C00B1E276 /* ModelingView.swift */,
+				CD30334D1AC8821B00807627 /* GRLView.swift */,
+				CD3033501AC8844900807627 /* GRLSoftgoalView.swift */,
 			);
 			name = View;
 			path = ..;
@@ -313,16 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD288EFA1ABF5E1100D3D787 /* DollarDefaultGestures.m in Sources */,
+				CD3033541AC885C300807627 /* GRLNotations.swift in Sources */,
 				CD0A024F1A8563BE00616056 /* ViewController.swift in Sources */,
 				CD5EB70C1AC251410063008F /* RecognizeController.swift in Sources */,
 				CD288EFF1ABF5E1100D3D787 /* DollarResult.m in Sources */,
+				CD3033511AC8844900807627 /* GRLSoftgoalView.swift in Sources */,
 				CD288EFD1ABF5E1100D3D787 /* DollarPoint.m in Sources */,
-				CD288EFC1ABF5E1100D3D787 /* DollarPGestureRecognizer.m in Sources */,
 				CD288EFE1ABF5E1100D3D787 /* DollarPointCloud.m in Sources */,
 				CD288EFB1ABF5E1100D3D787 /* DollarP.m in Sources */,
 				CD0A024D1A8563BE00616056 /* AppDelegate.swift in Sources */,
 				CD129D1D1A92C72700FEEF22 /* GesturePoint.swift in Sources */,
+				CD30334E1AC8821B00807627 /* GRLView.swift in Sources */,
 				CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */,
 				CD129D1B1A92C49900FEEF22 /* DollarPRecognizer.swift in Sources */,
 				CD4D16DA1A86D28A00D5B6B8 /* FreeFormLine.swift in Sources */,
@@ -334,19 +351,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD288F0A1ABF613800D3D787 /* DPTests.m in Sources */,
+				CD3033521AC8844900807627 /* GRLSoftgoalView.swift in Sources */,
 				CD288F021ABF5FB800D3D787 /* ObjCTexts.swift in Sources */,
 				CD288F071ABF606000D3D787 /* DollarPointCloud.m in Sources */,
+				CD3033551AC885C300807627 /* GRLNotations.swift in Sources */,
 				CD5EB70D1AC251410063008F /* RecognizeController.swift in Sources */,
 				CDE47CEF1AB0E1B1006EB276 /* AppDelegate.swift in Sources */,
 				CD288F041ABF605600D3D787 /* DollarP.m in Sources */,
 				CD11BB421AB0DE6600C5D573 /* DollarPRecognizer.swift in Sources */,
+				CD30334F1AC8821B00807627 /* GRLView.swift in Sources */,
 				CD0A02631A8563BE00616056 /* TouchGRLTests.swift in Sources */,
 				CD288F081ABF606300D3D787 /* DollarResult.m in Sources */,
 				CDE47CEE1AB0E1AE006EB276 /* GesturePoint.swift in Sources */,
-				CD288F051ABF605B00D3D787 /* DollarPGestureRecognizer.m in Sources */,
 				CDE47CF01AB0E1B4006EB276 /* ViewController.swift in Sources */,
 				CD288F061ABF605E00D3D787 /* DollarPoint.m in Sources */,
-				CD288F031ABF605000D3D787 /* DollarDefaultGestures.m in Sources */,
 				CDE47CEC1AB0E1A7006EB276 /* ModelingView.swift in Sources */,
 				CDE47CED1AB0E1AC006EB276 /* FreeFormLine.swift in Sources */,
 			);

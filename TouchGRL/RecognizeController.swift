@@ -15,7 +15,6 @@ class RecognizeController{
         var dP : DollarP = DollarP()
         setTemplatePoints(dP)
         var result = dP.recognize(points)
-        println("\(result.name)")
         return result
     }
     
