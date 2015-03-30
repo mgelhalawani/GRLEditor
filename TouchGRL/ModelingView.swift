@@ -71,8 +71,8 @@ class ModelingView: UIView {
         
         switch type {
         case "Softgoal":
-             newView = GRLSoftgoalView(frame: CGRectMake(15, 15, 100,100))
-             newView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.0)
+             newView = GRLSoftgoalView(frame: CGRectMake(15, 15, 100, 100))
+             newView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
              self.addSubview(newView)
         default:
             println("Unknown type")

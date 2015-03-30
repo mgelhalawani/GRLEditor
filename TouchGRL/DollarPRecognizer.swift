@@ -1,4 +1,18 @@
-//
+//*********************************************
+//**************** WARNING ********************
+//*********************************************
+// This Swift implentation of DollarP Algorithm 
+// is not yet ready to be used.
+// Testing found erros in the calcualtions of 
+// cloudDistance. More work need to be done 
+// before this class is ready
+// For now, you can use the Objective-C
+// implementation written by Felix Raab, 
+// check http://fe9lix.github.io/DollarP_ObjC/
+// for detials.
+//*********************************************
+
+
 //  DollarPRecoginzer.swift
 //  TouchGRL
 //
@@ -7,8 +21,7 @@
 //  for full explination of $P Point-Cloud Recognizer
 //
 //  Created by Mohamed El-Halawani on 2015-02-16.
-//
-//
+
 
 import Foundation
 import UIKit
