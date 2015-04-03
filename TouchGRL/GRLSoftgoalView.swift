@@ -16,11 +16,13 @@ class GRLSoftgoalView : GRLView{
     var xMargin : CGFloat
     var yMarign : CGFloat
     var controlPointDifference : CGFloat
+    var sectionHeight : CGFloat
+    var sectionWidth : CGFloat
     
     override init(frame: CGRect){
-        
-        let sectionWidth = frame.width / 10
-        let sectionHeight = frame.height / 10
+
+        sectionHeight = frame.height / 10
+        sectionWidth = frame.width / 10
         
         self.xMargin =  1.2 * sectionWidth
         self.yMarign = sectionHeight * 0.5
@@ -31,11 +33,51 @@ class GRLSoftgoalView : GRLView{
     
     override func drawRect(rect: CGRect) {
         var softgoalPath = UIBezierPath()
-        drawRightHalf(softgoalPath)
-        drawLeftHalf(softgoalPath)
+        softgoalPath.lineWidth = 2.5
+        softgoalPath.lineCapStyle = kCGLineCapRound
+        drawLeftPart(softgoalPath)
+        drawLowerPart(softgoalPath)
+        drawRightPart(softgoalPath)
+        drawUpperPart(softgoalPath)
     }
     
-    func drawRightHalf(path: UIBezierPath){
+    func drawLowerPart(path: UIBezierPath){
+        
+        var startPointX = self.bottomLeftPoint().x + xMargin
+        var startPointY = self.bottomLeftPoint().y - yMarign
+        
+        var endPointX = self.bottomRightPoint().x - xMargin
+        var endPointY = startPointY
+        
+        
+        var controlPointX = (startPointX + endPointX) / 2
+        var controlPointY = bottomLeftPoint().y - (4 * yMarign)
+        
+        path.moveToPoint(CGPointMake(startPointX, startPointY))
+        path.addQuadCurveToPoint(CGPointMake(endPointX, endPointY), controlPoint: CGPointMake(controlPointX, controlPointY))
+        path.stroke()
+        
+    }
+    
+    func drawUpperPart(path: UIBezierPath){
+        
+        var startPointX = self.topLeftPoint().x + xMargin
+        var startPointY = self.topLeftPoint().y + yMarign
+        
+        var endPointX = self.topRightPoint().x - xMargin
+        var endPointY = startPointY
+        
+        
+        var controlPointX = (startPointX + endPointX) / 2
+        var controlPointY = topLeftPoint().y + (4 * yMarign)
+        
+        path.moveToPoint(CGPointMake(startPointX, startPointY))
+        path.addQuadCurveToPoint(CGPointMake(endPointX, endPointY), controlPoint: CGPointMake(controlPointX, controlPointY))
+        path.stroke()
+        
+    }
+    
+    func drawLeftPart(path: UIBezierPath){
         var startPointX = self.topLeftPoint().x + xMargin
         var startPointY = self.topLeftPoint().y + yMarign
         var endPointY = self.bottomLeftPoint().y - yMarign
@@ -47,7 +89,7 @@ class GRLSoftgoalView : GRLView{
         path.stroke()
     }
     
-    func drawLeftHalf(path: UIBezierPath){
+    func drawRightPart(path: UIBezierPath){
         
         var startPointX = self.topRightPoint().x - xMargin
         var startPointY = self.topRightPoint().y + yMarign
@@ -61,4 +103,5 @@ class GRLSoftgoalView : GRLView{
         path.addQuadCurveToPoint(CGPointMake(startPointX, endPointY), controlPoint: CGPointMake(controlPointX, controlPointY))
         path.stroke()
     }
+    
 }

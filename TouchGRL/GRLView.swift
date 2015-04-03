@@ -13,6 +13,8 @@ class GRLView : UIView {
     
     func radiansFromDegrees(degrees: CGFloat) -> (CGFloat){
         return (CGFloat (M_PI) * degrees) / 180
+        
+        
     }
     
     func topLeftPoint()->(x: CGFloat, y: CGFloat){
