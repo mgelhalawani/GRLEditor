@@ -41,6 +41,7 @@ class ModelingView: UIView {
         
         addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
         calculateStartPointFromSecondPoint(lastPoint)
+        calculateEndPointFromSecondPoint(lastPoint)
         
         self.setNeedsDisplay()
     }
@@ -48,6 +49,10 @@ class ModelingView: UIView {
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         updateLastPoint(touches.anyObject()?.locationInView(self))
         addPoint(self.strockID++, x: Float(lastPoint.x), y: Float(lastPoint.y))
+
+        calculateStartPointFromSecondPoint(lastPoint)
+        calculateEndPointFromSecondPoint(lastPoint)
+       
         self.recognize()
     }
 
@@ -88,23 +93,34 @@ class ModelingView: UIView {
     }
     
     func drawGRLNotation(type: NSString){
-        var newView: GRLView
+
+        self.touchPoints = []
+        freeFormLines = []
+        self.setNeedsDisplay()
+        var width = max(endPoint.x, startPoint.x) - min(endPoint.x, startPoint.x)
+        var height = max(endPoint.y, startPoint.y) - min(endPoint.y, startPoint.y)
         
         switch type {
         case "Softgoal":
-            newView = GRLSoftgoalView(frame: CGRectMake(15, 15, 300, 150))
-            newView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+            var newView = GRLSoftgoalView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
+            newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
             self.addSubview(newView)
-            self.touchPoints = []
-            freeFormLines = []
         default:
             println("Unknown type")
         }
+        
+        self.startPoint = CGPointMake(0.0, 0.0)
+        self.endPoint = CGPointMake(0.0, 0.0)
     }
     
     func calculateStartPointFromSecondPoint(secondPoint: CGPoint){
         self.startPoint.x = min(self.startPoint.x, secondPoint.x)
         self.startPoint.y = min(self.startPoint.y, secondPoint.y)
-        println("StartX= \(startPoint.x) StartY= \(startPoint.y)")
     }
+
+    func calculateEndPointFromSecondPoint(secondPoint: CGPoint){
+        self.endPoint.x = max(self.endPoint.x, secondPoint.x)
+        self.endPoint.y = max(self.endPoint.y, secondPoint.y)
+    }
+
 }
