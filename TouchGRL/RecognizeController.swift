@@ -198,5 +198,3 @@ class RecognizeController{
         return DollarPoint(id: id, x: x, y: y)
     }
 }
-
-
