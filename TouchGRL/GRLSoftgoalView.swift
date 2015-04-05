@@ -30,6 +30,17 @@ class GRLSoftgoalView : GRLView{
         
         super.init(frame: frame)
     }
+
+    required init(coder aDecoder: NSCoder) {
+        sectionHeight = 1
+        sectionWidth = 1
+        
+        self.xMargin =  1.2 * sectionWidth
+        self.yMarign = sectionHeight * 0.5
+        self.controlPointDifference = 2 * sectionWidth
+
+        super.init(coder: aDecoder)
+    }
     
     override func drawRect(rect: CGRect) {
         var softgoalPath = UIBezierPath()

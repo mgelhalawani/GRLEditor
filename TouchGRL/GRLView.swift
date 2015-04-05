@@ -9,12 +9,21 @@
 import Foundation
 import UIKit
 
-class GRLView : UIView {
+class GRLView : UIView, UIGestureRecognizerDelegate{
+    
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        let recognizer = UIPinchGestureRecognizer(target: self, action:Selector("handlePinch:"))
+        recognizer.delegate = self
+        self.addGestureRecognizer(recognizer)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     func radiansFromDegrees(degrees: CGFloat) -> (CGFloat){
         return (CGFloat (M_PI) * degrees) / 180
-        
-        
     }
     
     func topLeftPoint()->(x: CGFloat, y: CGFloat){
@@ -39,5 +48,23 @@ class GRLView : UIView {
 
     func height()->(CGFloat){
         return self.bounds.size.height
+    }
+    
+    func handlePinch(recognizer : UIPinchGestureRecognizer){
+        self.transform = CGAffineTransformScale(self.transform, recognizer.scale, recognizer.scale)
+        recognizer.scale = 1
+        self.setNeedsDisplay()
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        // do nothing
+    }
+    
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+        // do nothing
+    }
+    
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        // do nothing
     }
 }
