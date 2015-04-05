@@ -13,9 +13,14 @@ class GRLView : UIView, UIGestureRecognizerDelegate{
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        let recognizer = UIPinchGestureRecognizer(target: self, action:Selector("handlePinch:"))
-        recognizer.delegate = self
-        self.addGestureRecognizer(recognizer)
+        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action:Selector("handlePinch:"))
+        let panRecognizer = UIPanGestureRecognizer(target: self, action:Selector("handlePan:"))
+        
+        pinchRecognizer.delegate = self
+        panRecognizer.delegate = self
+        
+        self.addGestureRecognizer(pinchRecognizer)
+        self.addGestureRecognizer(panRecognizer)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -53,7 +58,12 @@ class GRLView : UIView, UIGestureRecognizerDelegate{
     func handlePinch(recognizer : UIPinchGestureRecognizer){
         self.transform = CGAffineTransformScale(self.transform, recognizer.scale, recognizer.scale)
         recognizer.scale = 1
-        self.setNeedsDisplay()
+    }
+    
+    func handlePan(recognizer : UIPanGestureRecognizer){
+        let translation = recognizer.translationInView(self)
+        self.center = CGPoint(x:self.center.x + translation.x, y:self.center.y + translation.y)
+        recognizer.setTranslation(CGPointZero, inView: self)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -67,4 +77,5 @@ class GRLView : UIView, UIGestureRecognizerDelegate{
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         // do nothing
     }
+    
 }
