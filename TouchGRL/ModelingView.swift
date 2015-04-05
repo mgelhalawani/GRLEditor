@@ -63,6 +63,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
 
     override func drawRect(rect: CGRect) {
         // where the magic happens, drawing a line between two points on the view
+        // In order to show feedback
         var context = UIGraphicsGetCurrentContext()
         CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0)
         CGContextSetLineCap(context, kCGLineCapRound)
@@ -110,6 +111,8 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             var newView = GRLSoftgoalView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
             newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
             self.addSubview(newView)
+        case "Line":
+            println("Its a line")
         default:
             println("Unknown type")
         }
@@ -129,6 +132,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     }
     
     func handlePinch(recognizer : UIPinchGestureRecognizer){
-        // do nothing
+        // do nothing, otherwise the feedback drawing will 
+        // draw lines every where on the view.
     }
 }
