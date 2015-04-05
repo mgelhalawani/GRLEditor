@@ -11,7 +11,7 @@
 
 import UIKit
 
-class ModelingView: UIView {
+class ModelingView: UIView, UIGestureRecognizerDelegate {
 
     var lastPoint: CGPoint!
     var freeFormLines: [FreeFormLine] = []
@@ -25,6 +25,11 @@ class ModelingView: UIView {
         startPoint = CGPointMake(0.0, 0.0)
         endPoint = CGPointMake(0.0, 0.0)
         super.init(coder: aDecoder)
+        
+        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action:Selector("handlePinch:"))
+        pinchRecognizer.delegate = self
+        self.addGestureRecognizer(pinchRecognizer)
+    
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -122,5 +127,8 @@ class ModelingView: UIView {
         self.endPoint.x = max(self.endPoint.x, secondPoint.x)
         self.endPoint.y = max(self.endPoint.y, secondPoint.y)
     }
-
+    
+    func handlePinch(recognizer : UIPinchGestureRecognizer){
+        // do nothing
+    }
 }
