@@ -19,6 +19,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     var touchPoints : [DollarPoint] = []
     var startPoint : CGPoint!
     var endPoint : CGPoint!
+    var touchTimer : NSTimer!
 
 
     required init(coder aDecoder: NSCoder) {
@@ -33,6 +34,9 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        if touchTimer != nil{
+            touchTimer.invalidate()
+        }
         updateLastPoint(touches.anyObject()?.locationInView(self))
         addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
         self.updateStartPoint(self.lastPoint)
@@ -57,8 +61,8 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
 
         calculateStartPointFromSecondPoint(lastPoint)
         calculateEndPointFromSecondPoint(lastPoint)
-       
-        self.recognize()
+        
+        touchTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "recognize", userInfo: nil, repeats: false)
     }
 
     override func drawRect(rect: CGRect) {
@@ -99,10 +103,6 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     }
     
     func drawGRLNotation(type: NSString){
-
-        self.touchPoints = []
-        freeFormLines = []
-        self.setNeedsDisplay()
         var width = max(endPoint.x, startPoint.x) - min(endPoint.x, startPoint.x)
         var height = max(endPoint.y, startPoint.y) - min(endPoint.y, startPoint.y)
         
@@ -111,14 +111,20 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             var newView = GRLSoftgoalView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
             newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
             self.addSubview(newView)
+            self.clearPoints()
         case "Line":
             println("Its a line")
+            self.clearPoints()
+        case "Delete":
+            var pointX = (min(endPoint.x, startPoint.x) + max(endPoint.x, startPoint.x)) / 2
+            var pointY = (min(endPoint.y, startPoint.y) + max(endPoint.y, startPoint.y)) / 2
+            var view = self.hitTest(CGPointMake(pointX, pointY), withEvent: nil)
+            view?.removeFromSuperview()
+            self.clearPoints()
         default:
             println("Unknown type")
+            self.clearPoints()
         }
-        
-        self.startPoint = CGPointMake(0.0, 0.0)
-        self.endPoint = CGPointMake(0.0, 0.0)
     }
     
     func calculateStartPointFromSecondPoint(secondPoint: CGPoint){
@@ -134,5 +140,13 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     func handlePinch(recognizer : UIPinchGestureRecognizer){
         // do nothing, otherwise the feedback drawing will 
         // draw lines every where on the view.
+    }
+    
+    func clearPoints(){
+        self.touchPoints = []
+        freeFormLines = []
+        self.startPoint = CGPointMake(0.0, 0.0)
+        self.endPoint = CGPointMake(0.0, 0.0)
+        self.setNeedsDisplay()
     }
 }
