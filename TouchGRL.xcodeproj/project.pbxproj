@@ -36,6 +36,7 @@
 		CD5EB70D1AC251410063008F /* RecognizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5EB70B1AC251410063008F /* RecognizeController.swift */; };
 		CD972B1B1A8FD11C00E5AA36 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD972B191A8FD11C00E5AA36 /* LaunchScreen.xib */; };
 		CD9D419A1A86CD5C00B1E276 /* ModelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D41991A86CD5C00B1E276 /* ModelingView.swift */; };
+		CDA81BAA1AD2E35C00CD0909 /* GRLContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA81BA91AD2E35C00CD0909 /* GRLContributionView.swift */; };
 		CDE47CEC1AB0E1A7006EB276 /* ModelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D41991A86CD5C00B1E276 /* ModelingView.swift */; };
 		CDE47CED1AB0E1AC006EB276 /* FreeFormLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D16D91A86D28A00D5B6B8 /* FreeFormLine.swift */; };
 		CDE47CEE1AB0E1AE006EB276 /* GesturePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD129D1C1A92C72700FEEF22 /* GesturePoint.swift */; };
@@ -83,6 +84,7 @@
 		CD5EB70B1AC251410063008F /* RecognizeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecognizeController.swift; path = TouchGRL/RecognizeController.swift; sourceTree = "<group>"; };
 		CD972B1A1A8FD11C00E5AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CD9D41991A86CD5C00B1E276 /* ModelingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelingView.swift; path = TouchGRL/ModelingView.swift; sourceTree = "<group>"; };
+		CDA81BA91AD2E35C00CD0909 /* GRLContributionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GRLContributionView.swift; path = TouchGRL/GRLContributionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				CD9D41991A86CD5C00B1E276 /* ModelingView.swift */,
 				CD30334D1AC8821B00807627 /* GRLView.swift */,
 				CD3033501AC8844900807627 /* GRLSoftgoalView.swift */,
+				CDA81BA91AD2E35C00CD0909 /* GRLContributionView.swift */,
 			);
 			name = View;
 			path = ..;
@@ -334,6 +337,7 @@
 				CD5EB70C1AC251410063008F /* RecognizeController.swift in Sources */,
 				CD288EFF1ABF5E1100D3D787 /* DollarResult.m in Sources */,
 				CD3033511AC8844900807627 /* GRLSoftgoalView.swift in Sources */,
+				CDA81BAA1AD2E35C00CD0909 /* GRLContributionView.swift in Sources */,
 				CD288EFD1ABF5E1100D3D787 /* DollarPoint.m in Sources */,
 				CD288EFE1ABF5E1100D3D787 /* DollarPointCloud.m in Sources */,
 				CD288EFB1ABF5E1100D3D787 /* DollarP.m in Sources */,

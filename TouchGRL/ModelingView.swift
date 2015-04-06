@@ -112,14 +112,20 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
             self.addSubview(newView)
             self.clearPoints()
-        case "Line":
+        case "Contribution":
             println("Its a line")
+            
+            var newView = GRLContributionView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
+            newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
+            self.addSubview(newView)
             self.clearPoints()
         case "Delete":
             var pointX = (min(endPoint.x, startPoint.x) + max(endPoint.x, startPoint.x)) / 2
             var pointY = (min(endPoint.y, startPoint.y) + max(endPoint.y, startPoint.y)) / 2
             var view = self.hitTest(CGPointMake(pointX, pointY), withEvent: nil)
-            view?.removeFromSuperview()
+            if view != self{
+                view?.removeFromSuperview()
+            }
             self.clearPoints()
         default:
             println("Unknown type")
@@ -139,7 +145,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     
     func handlePinch(recognizer : UIPinchGestureRecognizer){
         // do nothing, otherwise the feedback drawing will 
-        // draw lines every where on the view.
+        // draw lines everywhere on the view.
     }
     
     func clearPoints(){
