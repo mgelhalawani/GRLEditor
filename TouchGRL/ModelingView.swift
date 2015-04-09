@@ -30,6 +30,11 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
         let pinchRecognizer = UIPinchGestureRecognizer(target: self, action:Selector("handlePinch:"))
         pinchRecognizer.delegate = self
         self.addGestureRecognizer(pinchRecognizer)
+        
+        var goalView = GRLGoalView(frame: CGRectMake(10, 10, 100, 50))
+        goalView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
+        self.addSubview(goalView)
+
     
     }
     
@@ -105,7 +110,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
     func drawGRLNotation(type: NSString){
         var width = max(endPoint.x, startPoint.x) - min(endPoint.x, startPoint.x)
         var height = max(endPoint.y, startPoint.y) - min(endPoint.y, startPoint.y)
-        
+
         switch type {
         case "Softgoal":
             var newView = GRLSoftgoalView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
@@ -113,10 +118,8 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             self.addSubview(newView)
             self.clearPoints()
         case "Contribution":
-            println("Its a line")
-            
             var newView = GRLContributionView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
-            newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
+            newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.5)
             self.addSubview(newView)
             self.clearPoints()
         case "Delete":
