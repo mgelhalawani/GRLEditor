@@ -30,44 +30,48 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
         let pinchRecognizer = UIPinchGestureRecognizer(target: self, action:Selector("handlePinch:"))
         pinchRecognizer.delegate = self
         self.addGestureRecognizer(pinchRecognizer)
-        
-        var goalView = GRLGoalView(frame: CGRectMake(10, 10, 100, 50))
-        goalView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
-        self.addSubview(goalView)
-
-    
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         if touchTimer != nil{
             touchTimer.invalidate()
         }
-        updateLastPoint(touches.anyObject()?.locationInView(self))
-        addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
-        self.updateStartPoint(self.lastPoint)
+        
+        if let touch = touches.first as? UITouch {
+            let newPoint = touch.locationInView(self)
+            updateLastPoint(newPoint)
+            addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
+            self.updateStartPoint(self.lastPoint)
+        }
     }
     
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-
-        var newPoint = touches.anyObject()?.locationInView(self)
-        freeFormLines.append(FreeFormLine(start: lastPoint, end: newPoint!))
-        updateLastPoint(newPoint)
-        
-        addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
-        calculateStartPointFromSecondPoint(lastPoint)
-        calculateEndPointFromSecondPoint(lastPoint)
-        
-        self.setNeedsDisplay()
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            let newPoint = touch.locationInView(self)
+    
+            freeFormLines.append(FreeFormLine(start: lastPoint, end: newPoint))
+            updateLastPoint(newPoint)
+            
+            addPoint(self.strockID, x: Float(lastPoint.x), y: Float(lastPoint.y))
+            calculateStartPointFromSecondPoint(lastPoint)
+            calculateEndPointFromSecondPoint(lastPoint)
+            
+            self.setNeedsDisplay()
+        }
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        updateLastPoint(touches.anyObject()?.locationInView(self))
-        addPoint(self.strockID++, x: Float(lastPoint.x), y: Float(lastPoint.y))
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            
+            let newPoint = touch.locationInView(self)
+            updateLastPoint(newPoint)
+            addPoint(self.strockID++, x: Float(lastPoint.x), y: Float(lastPoint.y))
 
-        calculateStartPointFromSecondPoint(lastPoint)
-        calculateEndPointFromSecondPoint(lastPoint)
-        
-        touchTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "recognize", userInfo: nil, repeats: false)
+            calculateStartPointFromSecondPoint(lastPoint)
+            calculateEndPointFromSecondPoint(lastPoint)
+            
+            touchTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "recognize", userInfo: nil, repeats: false)
+        }
     }
 
     override func drawRect(rect: CGRect) {
@@ -129,6 +133,12 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             if view != self{
                 view?.removeFromSuperview()
             }
+            self.clearPoints()
+            
+        case "Goal":
+            var goalView = GRLGoalView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
+            goalView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.0)
+            self.addSubview(goalView)
             self.clearPoints()
         default:
             println("Unknown type")

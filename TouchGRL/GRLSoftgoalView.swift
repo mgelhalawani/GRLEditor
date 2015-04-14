@@ -29,6 +29,8 @@ class GRLSoftgoalView : GRLView{
         self.controlPointDifference = 2 * sectionWidth
         
         super.init(frame: frame)
+        
+        self.addTextField(frame)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -113,6 +115,18 @@ class GRLSoftgoalView : GRLView{
         path.moveToPoint(CGPointMake(startPointX, startPointY))
         path.addQuadCurveToPoint(CGPointMake(startPointX, endPointY), controlPoint: CGPointMake(controlPointX, controlPointY))
         path.stroke()
+    }
+    
+    func addTextField(frame: CGRect){
+        var frame = CGRectMake(0, 0, 80, 40)
+        var textField = UITextField(frame: frame)
+        textField.textColor = UIColor.blackColor()
+        textField.backgroundColor = UIColor.whiteColor()
+        textField.borderStyle = UITextBorderStyle.RoundedRect
+        var centerX = self.width() / 2
+        var CenterY = self.height() / 2
+        textField.center = CGPointMake(centerX, CenterY)
+        self.addSubview(textField)
     }
     
 }

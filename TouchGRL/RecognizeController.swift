@@ -289,9 +289,43 @@ class RecognizeController{
             makePoint(0.4305058, y: 0.4919005, id: 1),
             makePoint(0.4577835, y: 0.5281876, id: 1)
         ])
+        
+        dP.pointClouds[7] = makePointCloud("Goal", points: [makePoint(-0.1704882, y: -0.2364176, id: 1),
+            makePoint(-0.2487023, y: -0.2289447, id: 1),
+            makePoint(-0.3265899, y: -0.2179361, id: 1),
+            makePoint(-0.3928486, y: -0.1802318, id: 1),
+            makePoint(-0.4386773, y: -0.1190754, id: 1),
+            makePoint(-0.4651605, y: -0.04498978, id: 1),
+            makePoint(-0.4762207, y: 0.0326829, id: 1),
+            makePoint(-0.4643919, y: 0.1102609, id: 1),
+            makePoint(-0.420083, y: 0.175221, id: 1),
+            makePoint(-0.360825, y: 0.2248015, id: 1),
+            makePoint(-0.2878165, y: 0.2476588, id: 1),
+            makePoint(-0.2087822, y: 0.2476588, id: 1),
+            makePoint(-0.1297479, y: 0.2476588, id: 1),
+            makePoint(-0.05088839, y: 0.2427556, id: 1),
+            makePoint(0.02729833, y: 0.2316795, id: 1),
+            makePoint(0.1051337, y: 0.2180121, id: 1),
+            makePoint(0.181834, y: 0.2026275, id: 1),
+            makePoint(0.2590845, y: 0.185948, id: 1),
+            makePoint(0.3364351, y: 0.1718835, id: 1),
+            makePoint(0.4081015, y: 0.1404066, id: 1),
+            makePoint(0.469284, y: 0.09373301, id: 1),
+            makePoint(0.5114879, y: 0.03065085, id: 1),
+            makePoint(0.5237793, y: -0.04329216, id: 1),
+            makePoint(0.4753055, y: -0.1001781, id: 1),
+            makePoint(0.4070099, y: -0.1396003, id: 1),
+            makePoint(0.3387244, y: -0.1791354, id: 1),
+            makePoint(0.2612249, y: -0.1931278, id: 1),
+            makePoint(0.1827857, y: -0.2010163, id: 1),
+            makePoint(0.1042808, y: -0.210134, id: 1),
+            makePoint(0.02574384, y: -0.2173093, id: 1),
+            makePoint(-0.05038932, y: -0.2367243, id: 1),
+            makePoint(-0.1259023, y: -0.2555259, id: 1)
+        ])
     }
     
-    func makePointCloud(name: NSString, points: NSArray) -> (DollarPointCloud){
+    func makePointCloud(name: String, points: [AnyObject]) -> (DollarPointCloud){
         var pointCloud : DollarPointCloud = DollarPointCloud(name: name, points:points)
         return pointCloud
     }
