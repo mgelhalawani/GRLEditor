@@ -16,5 +16,7 @@ class GRLGoalView : GRLView{
         CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0)
         CGContextSetLineWidth(context, 2.5)
         CGContextStrokeEllipseInRect(context, CGRectMake(rect.origin.x + 10, rect.origin.y + 10, rect.width - 20, rect.height - 20))
+        
+        self.addTextField(rect)
     }
 }

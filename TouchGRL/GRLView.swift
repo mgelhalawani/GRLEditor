@@ -78,4 +78,20 @@ class GRLView : UIView, UIGestureRecognizerDelegate{
         // do nothing
     }
     
+    func addTextField(frame: CGRect){
+        
+        var textFieldWidth = min(self.width() - 20, 150)
+        
+        var frame = CGRectMake(0, 0, textFieldWidth, 25)
+        var textField = UITextField(frame: frame)
+        textField.textColor = UIColor.blackColor()
+        textField.backgroundColor = UIColor.whiteColor()
+        textField.borderStyle = UITextBorderStyle.RoundedRect
+        var centerX = self.width() / 2
+        var CenterY = self.height() / 2
+        textField.center = CGPointMake(centerX, CenterY)
+        textField.text = "Softgoal"
+        textField.textAlignment = NSTextAlignment.Center
+        self.addSubview(textField)
+    }
 }
