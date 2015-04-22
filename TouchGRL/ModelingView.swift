@@ -15,6 +15,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
 
     var lastPoint: CGPoint!
     var freeFormLines: [FreeFormLine] = []
+    var contributionLines: [FreeFormLine] = []
     var strockID : Int = 1
     var touchPoints : [DollarPoint] = []
     var startPoint : CGPoint!
@@ -87,6 +88,13 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             CGContextAddLineToPoint(context, line.endX, line.endY)
         }
         CGContextStrokePath(context)
+        
+        CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0)
+        for line in contributionLines{
+            CGContextMoveToPoint(context, line.startX, line.startY)
+            CGContextAddLineToPoint(context, line.endX, line.endY)
+        }
+        CGContextStrokePath(context)
     }
     
     func updateLastPoint(newPoint: CGPoint?){
@@ -122,9 +130,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
             self.addSubview(newView)
             self.clearPoints()
         case "Contribution":
-            var newView = GRLContributionView(frame: CGRectMake(self.startPoint.x, self.startPoint.y, width, height))
-            newView.backgroundColor = UIColor(red: 255.0, green:255.0, blue: 255.0, alpha: 0.5)
-            self.addSubview(newView)
+            self.drawContribution()
             self.clearPoints()
         case "Delete":
             var pointX = (min(endPoint.x, startPoint.x) + max(endPoint.x, startPoint.x)) / 2
@@ -167,5 +173,11 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
         self.startPoint = CGPointMake(0.0, 0.0)
         self.endPoint = CGPointMake(0.0, 0.0)
         self.setNeedsDisplay()
+    }
+    
+    func drawContribution(){
+        for line in freeFormLines{
+            contributionLines.append(line)
+        }
     }
 }
