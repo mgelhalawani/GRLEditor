@@ -51,7 +51,7 @@ class GRLSoftgoalView : GRLView{
         drawRightPart(softgoalPath)
         drawUpperPart(softgoalPath)
         
-        self.addTextField(frame)
+        self.addTextField(frame, text: "Softgoal")
     }
     
     func drawLowerPart(path: UIBezierPath){

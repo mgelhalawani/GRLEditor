@@ -78,7 +78,7 @@ class GRLView : UIView, UIGestureRecognizerDelegate{
         // do nothing
     }
     
-    func addTextField(frame: CGRect){
+    func addTextField(frame: CGRect, text: String){
         
         var textFieldWidth = min(self.width() - 20, 150)
         
@@ -90,7 +90,7 @@ class GRLView : UIView, UIGestureRecognizerDelegate{
         var centerX = self.width() / 2
         var CenterY = self.height() / 2
         textField.center = CGPointMake(centerX, CenterY)
-        textField.text = "Softgoal"
+        textField.text = text
         textField.textAlignment = NSTextAlignment.Center
         self.addSubview(textField)
     }

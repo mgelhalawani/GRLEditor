@@ -90,6 +90,7 @@ class ModelingView: UIView, UIGestureRecognizerDelegate {
         CGContextStrokePath(context)
         
         CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0)
+
         for line in contributionLines{
             CGContextMoveToPoint(context, line.startX, line.startY)
             CGContextAddLineToPoint(context, line.endX, line.endY)
